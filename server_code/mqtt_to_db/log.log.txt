@@ -1,0 +1,6 @@
+Message: [2019-08-26_15-23-01] 2.6.0
+Message: [2019-08-26_15-23-01] connected to /root/mqtt_to_db/dbs/2019_08_26.db
+Message: [2019-08-26_15-23-01] creating tables
+Message: [2019-08-26_15-23-01] done
+Message: [2019-08-26_15-23-01] Connected with result code 0
+Message: [2019-08-26_15-23-01] subbed to all topics

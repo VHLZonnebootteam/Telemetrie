@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name stroom_shield)(type Legacy)(uri ${KIPRJMOD}/stroom_shield.lib)(options "")(descr ""))
+  (lib (name Shield_Eth06-REV3)(type Legacy)(uri ${KIPRJMOD}/Shield_Eth06-REV3.lib)(options "")(descr ""))
+)

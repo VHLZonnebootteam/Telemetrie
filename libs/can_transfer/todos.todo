@@ -1,0 +1,46 @@
+deze library verstuurd canframes over de serial
+todos:
+  ✔ lib afmaken die can frames over de serial stuurt @done(2019-06-13 15:12) @project(todos)
+  ☐ lib testen
+  ✔ ervoor zorgen dat de controller op dezelfde canbus zit als de mptt's en accu @done(2019-06-13 15:12) @project(todos)
+  ☐ de controller en mptt's oncijferen
+  ✔ in het aantal berichtjes gaan snijden totdat het over de serial @done(2019-06-13 15:12) @project(todos)
+  ☐ kijken of de lib ook samen kan werken met de spi
+
+can frames die niet verstuurd hoeven te worden:
+  - accu
+    omdat de temp collection verstuurd word kunnen deze gegevens in de node red worden gereconsrueerd
+    - cell temp high
+    - cell temp low
+
+    - power_level. is dit niet hetzelfde als state of charge?
+
+can frames die maar 1 keer per seconde verstuurd hoeven te worden:
+  - accu
+    - cell temp collection. temp low,mid_low,mid_high,high.
+    - voltage per cell
+    - current discharge
+    - current charge
+    -
+
+can frames die maar 1 keer per minuut verstuurd hoeven te worden:
+  - accu
+    - bms_state doel onbekend, toch loggen om te kijken hoe het veranderd
+    - time to go. heeft toch maar een resolutie van een minuut
+
+
+stappen:
+    - arduino ontvangt can frame
+    - de arduino kijkt
+    - deze word in de code uitgelezen
+    - in de library worden dan de hasmaps geupdate
+    - in de arudino code kunnen dan de haspmaps worden uitgelezen
+
+punten:
+    - de CAN bus is duizenden keren sneller dan de serial, hier moet dus flink op de arduino in gesneden worden.
+        - alleen de mptt's en de accu versturen 1685 berichtjes per seconde. dit past niet over een serial met een 115200 baud rate.
+        - ik kan denk ik deze code zo schrijven dat hij kan worden hergebruikt op de esp (mischien met library).
+    -
+
+beschrijving protocol:
+    [headerbyte1][headerbyte2][de len van het bericht na deze byte][type_marker][waarde als bytes][naam]

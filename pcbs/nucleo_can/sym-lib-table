@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name nucleo_can-rescue)(type Legacy)(uri ${KIPRJMOD}/nucleo_can-rescue.lib)(options "")(descr ""))
+)

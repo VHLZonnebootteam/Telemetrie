@@ -1,0 +1,19 @@
+[Unit]
+Description=mqtt_to_db
+
+[Service]
+
+User=root
+WorkingDirectory=/root/mqtt_to_db/
+
+#path to executable. 
+#executable is a bash script which calls .py file
+
+ExecStart=/root/mqtt_to_db/run.sh
+SuccessExitStatus=143
+TimeoutStopSec=10
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

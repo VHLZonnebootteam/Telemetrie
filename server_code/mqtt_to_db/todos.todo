@@ -1,0 +1,6 @@
+todos:
+  ✔ subscribe to topics @done(2019-08-25 01:16) @project(todos)
+  ✔ create sqlite database @done(2019-08-25 01:16) @project(todos)
+  ✔ create a new database for every day @done(2019-08-25 01:16) @project(todos)
+  ☐ run scripts as service
+  ☐ add in error reporting

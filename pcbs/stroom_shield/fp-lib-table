@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name stroom_shield)(type KiCad)(uri ${KIPRJMOD}/stroom_shield.pretty)(options "")(descr ""))
+  (lib (name Shield_Eth06-REV3)(type Legacy)(uri ${KIPRJMOD}/Shield_Eth06-REV3.mod)(options "")(descr ""))
+)

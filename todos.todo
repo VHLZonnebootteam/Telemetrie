@@ -1,0 +1,32 @@
+todos:
+  ☐ nieuwe todo lijst maken
+
+
+
+
+
+notities:
+
+budget per loop 1500 us
+absoluut max budget per bericht 20.000 us
+voor topic 42 chars 755 us
+voor topic 2 chars 566 us
+
+looptijd het liefst onder 1.5 us omdat can berichten ~ 0.5 ms uit elkaar zitten
+en de module een rx buffer heeft van 3 berichten.
+als dit niet haalbaar is is het eigenlijk niet erg.
+als de micro een bericht mist word hij opnieuw verzonden binnen 250ms.
+
+loop van een loop:
+    1. haal nieuwe berichten op van de can module
+        2. als er nieuwe berichten zijn vanuit de can bus, check of ze doorgestuurd
+           moeten worden.
+           3. als ze doorgestuurd moeten worden, vertaal naar string stuur ze
+              naar mqtt broker.
+    4. verstuur 1 keer per seconde de gps locatie.
+
+
+status leds:
+    rood: arduino is gestart maar zit nog in setup.
+    geel: arduino heeft verbinding verloren of heeft nog geen verbinding gemaakt.
+    groen: arduino is verbonden met de mqtt server, en heeft een bericht onvangen via de can.

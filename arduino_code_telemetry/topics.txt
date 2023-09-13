@@ -1,0 +1,23 @@
+topic				   units
+mtr_cntlr/battery_current	// amps
+mtr_cntlr/mtr_toeren		// rpm
+mtr_cntlr/temp			// degrees c
+mtr_cntlr/odometer		// rotations
+mtr_cntlr/pwm_inkomend		// -1024<>1024
+mtr_cntlr/pwm_uitgaand		// -1024<>1024
+mtr_cntlr/warning		// int (error code)
+mtr_cntlr/failure		// int (error code)
+accu/voltage_mv			// millivolt
+accu/current			// 0.01 amp
+accu/discharge_current		// 0.01 amp
+accu/charge			// 0.01 amp
+accu/charge_percent		// percents
+accu/time_to_go			// minutes
+accu/bms_state			// int code
+accu/temp_low			// degrees c 
+accu/temp_25th_percentile	// degrees c
+accu/temp_75th_percentile	// degrees c
+accu/temp_high			// degrees c
+accu/voltage_cell_[1-12]	// millivolt
+mppt_[1-6]/volt_in		// voltsmtr_cntlr/current
+mppt_[1-6]/milliwatt_uit	// milliwatt 
