@@ -8,7 +8,7 @@ typedef uint8_t u8;
 const byte mac[] = {
   0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED
 };
-const char* mqttServer = "telemetrie.zonnebootteam.nl";
+const char* mqttServer = "telemetrie.zonnebootteam.nl:1880";
 const int mqttPort = 1883;
 const char* mqttUser = "Zonneboot";
 const char* mqttPassword = "Zonnepanelen1";
