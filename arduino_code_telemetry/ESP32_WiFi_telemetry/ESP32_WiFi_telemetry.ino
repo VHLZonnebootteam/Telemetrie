@@ -12,10 +12,20 @@
 typedef uint8_t u8;
 //CAN setup
 struct can_frame canMsg;
-MCP2515 mcp2515(9);
+MCP2515 mcp2515(5);
 int msg_count = 0;
 unsigned long prev_millis = 0;
 const long interval = 10000;
+/* pinout
+VCC -> 3.3v
+GND -> GND
+CS -> pin 5
+SCK -> GPIO 18
+MOSI -> GPIO 23
+MISO -> GPIO 19
+INT -> GPIO 4 (optional)
+
+*/
 
 // voor de accu gaan er tussen de 1670-1685 berichten over de can bus.
 // als dit niet het geval is dan is er waarschijnlijk een kabel los/stuk.
